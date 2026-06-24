@@ -942,7 +942,7 @@ footer .highlight {
 }
 
 /* ==========================================================================
-   DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE (HTML/CSS NATIVO)
+   DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE (CORREGIDO Y SIN DESCUADRES)
    ========================================================================== */
 
 .hero-container {
@@ -962,7 +962,7 @@ footer .highlight {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 480px; /* Un poco más de margen por el nodo de abajo */
     position: relative;
 }
 
@@ -988,7 +988,7 @@ footer .highlight {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Nodo Central (Raíz PYP) */
+/* Nodo Central (Raíz PYP) - Centrado absoluto matemático */
 .root-node {
     width: 90px;
     height: 90px;
@@ -999,6 +999,7 @@ footer .highlight {
     border-color: var(--accent);
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
     animation: pulseGlow 3s ease-in-out infinite;
+    z-index: 10; /* Por encima de las líneas siempre */
 }
 
 .pyp-badge {
@@ -1010,11 +1011,17 @@ footer .highlight {
 
 /* Nodos Periféricos (Hojas) */
 .leaf {
+    position: absolute;
     width: 110px;
     height: 110px;
     padding: 0.5rem;
     text-align: center;
     border-radius: 16px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .leaf i {
@@ -1031,53 +1038,85 @@ footer .highlight {
     color: var(--text-muted);
 }
 
-/* Posiciones de los Nodos */
+/* ==========================================================================
+   POSICIONES DE LOS NODOS (CORREGIDO)
+   ========================================================================== */
 .leaf.lt { top: 0; left: 0; }
 .leaf.rt { top: 0; right: 0; }
 .leaf.lb { bottom: 0; left: 0; }
 .leaf.rb { bottom: 0; right: 0; }
+/* Mantenemos .top para que haga match perfecto con tu HTML actual sin cambiarlo */
+.leaf.top { bottom: -45px; left: 50%; transform: translateX(-50%); } 
 
-/* Ramas / Líneas de Interconexión */
+/* ==========================================================================
+   RAMAS / LÍNEAS DE INTERCONEXIÓN SINCRONIZADAS AL CENTRO (50%, 50%)
+   ========================================================================== */
 .tree-branch {
     position: absolute;
-    background: linear-gradient(var(--accent), transparent);
-    opacity: 0.2;
+    background: var(--accent);
+    opacity: 0.25;
     z-index: 1;
-    transform-origin: top left;
+    /* Todas nacen del punto exacto del centro matemático del árbol */
+    top: 50%;
+    left: 50%;
 }
 
-/* Dibujo geométrico de líneas que conectan al centro */
+/* Ajuste milimétrico de las diagonales hacia el centro de las tarjetas */
 .branch-left-top {
-    width: 2px; height: 110px;
-    top: 25%; left: 25%;
-    transform: rotate(45deg);
-}
-.branch-right-top {
-    width: 2px; height: 110px;
-    top: 25%; right: 25%;
-    transform: rotate(-45deg);
-    transform-origin: top right;
-}
-.branch-left-bottom {
-    width: 2px; height: 110px;
-    bottom: 25%; left: 25%;
-    transform: rotate(-45deg);
-    background: linear-gradient(transparent, var(--accent));
-}
-.branch-right-bottom {
-    width: 2px; height: 110px;
-    bottom: 25%; right: 25%;
-    transform: rotate(45deg);
-    transform-origin: bottom right;
-    background: linear-gradient(transparent, var(--accent));
+    width: 2px; 
+    height: 125px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    transform-origin: bottom center;
+    background: linear-gradient(to top, var(--accent), transparent);
 }
 
-/* Efectos Hover Interactivos */
+.branch-right-top {
+    width: 2px; 
+    height: 125px;
+    transform: translate(-50%, -100%) rotate(-45deg);
+    transform-origin: bottom center;
+    background: linear-gradient(to top, var(--accent), transparent);
+}
+
+.branch-left-bottom {
+    width: 2px; 
+    height: 125px;
+    transform: translate(-50%, 0) rotate(-45deg);
+    transform-origin: top center;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.branch-right-bottom {
+    width: 2px; 
+    height: 125px;
+    transform: translate(-50%, 0) rotate(45deg);
+    transform-origin: top center;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+/* Línea vertical limpia para Empatía */
+.branch-top {
+    width: 2px;
+    height: 110px;
+    top: 50%; /* Asegura el anclaje en el centro */
+    left: 50%;
+    transform: translate(-50%, 0);
+    transform-origin: top center;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+}
+/* ==========================================================================
+   EFECTOS HOVER INTERACTIVOS (ESTABLES SIN TEMBLORES)
+   ========================================================================== */
 .leaf:hover {
     transform: scale(1.08);
     border-color: var(--accent);
     background-color: #1e293b;
     box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Forzamos que la hoja .top mantenga su centrado en X durante el hover */
+.leaf.top:hover {
+    transform: translateX(-50%) scale(1.08) !important;
 }
 
 .leaf:hover i {
@@ -1108,10 +1147,10 @@ footer .highlight {
         gap: 2rem;
     }
     .hero-visual {
-        min-height: 380px;
+        min-height: 420px;
     }
     .engineering-tree {
-        transform: scale(0.85); /* Escalado para pantallas pequeñas */
+        transform: scale(0.85); /* Escalado fluido manteniendo proporciones intactas */
     }
     .cta-buttons {
         justify-content: center;
