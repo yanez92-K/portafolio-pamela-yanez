@@ -1,0 +1,1119 @@
+/* VARIABLES DE COLOR Y DISEÑO PREMIUM */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --card-bg: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER CON EFECTO GLASSMORPHISM (CRISTAL ESMERILADO) */
+
+header {
+
+  background: rgba(30, 41, 59, 0.85); 
+  
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1); 
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: var(--accent); 
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent); /* Se ilumina en cian al pasar el cursor */
+}
+/* DISEÑO COHESIVO DE SECCIONES */
+section {
+  padding: 8rem 2rem 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.subsection-title {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: -1.5rem auto 3rem auto;
+  font-size: 1rem;
+}
+
+/* HERO SECTION CON TEXTO EN DEGRADADO */
+.hero-section {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.role-title {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin-bottom: 2.5rem;
+}
+
+/* BOTONES PREMIUM Y LLAMADAS A LA ACCIÓN */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  margin-right: 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* TÍTULOS Y SUBTÍTULOS DE LAS CATEGORÍAS */
+.subsection-title {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--accent); 
+    padding-left: 0.8rem;
+}
+
+/* ==========================================================================
+   DISEÑO EXTENDIDO DE HABILIDADES TÉCNICAS
+   ========================================================================== */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+}
+
+.tech-card {
+    background-color: var(--card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    min-height: 295px; /* Altura unificada */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tech-mini-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.tech-card img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+/* Optimización para el contenedor de los 3 iconos de Fundamentos Web */
+.tech-icon-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+    width: 100%;
+}
+
+.tech-icon-group img {
+    width: 32px !important; 
+    height: 32px !important;
+    margin: 0 !important;
+    transition: transform 0.3s ease;
+}
+
+.tech-card h4 {
+    font-size: 1.15rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.tech-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+}
+
+/* Píldoras de Estado Inferiores */
+.tech-status-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: rgba(15, 23, 42, 0.4);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+/* Resalta tus objetivos actuales de Java, Spring, Hibernate y MySQL */
+.tech-status-pill.core {
+    border-color: rgba(56, 189, 248, 0.4);
+    color: var(--accent); /* Tu color cian */
+    background-color: rgba(56, 189, 248, 0.02);
+}
+
+/* Estado de bases de datos */
+.tech-status-pill.db {
+    border-color: rgba(56, 189, 248, 0.15);
+}
+
+/* Estado sutil para Node y React */
+.tech-status-pill.learning {
+    border-color: rgba(234, 179, 8, 0.3); /* Ámbar suave */
+    color: #f59e0b;
+}
+
+/* ==========================================================================
+   EFECTOS INTERACTIVOS (HOVER)
+   ========================================================================== */
+.tech-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.12);
+}
+
+.tech-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Comportamiento del grupo de iconos en hover */
+.tech-card:hover .tech-icon-group img {
+    transform: scale(1.1) translateY(-2px); 
+}
+
+/* Cambios de color genéricos para estados en hover */
+.tech-card:hover .tech-status-pill {
+    background-color: rgba(56, 189, 248, 0.05);
+    color: var(--text-main);
+    border-color: var(--accent);
+}
+
+/* Transiciones específicas por tipo de etiqueta al hacer Hover */
+.tech-card:hover .tech-status-pill.learning {
+    background-color: rgba(234, 179, 8, 0.08);
+    color: #fff;
+    border-color: #fbbf24;
+}
+
+.tech-card:hover .tech-status-pill.core {
+    background-color: rgba(56, 189, 248, 0.08);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+/* LÍNEA DE TIEMPO (TIMELINE) PARA EXPERIENCIA */
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--border-color);
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: calc(-2rem - 7px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+/* ==========================================================================
+   SECCIÓN TRAYECTORIA (REDISEÑO DE ALTO IMPACTO)
+   ========================================================================== */
+.trayectoria-section {
+    padding: 6rem 2rem; 
+    background-color: transparent;
+}
+
+.trayectoria-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trayectoria-columna {
+    flex: 1;
+    min-width: 320px;
+}
+
+/* Contenedor del Encabezado de la Columna */
+.columna-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem; 
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+/* Línea decorativa inferior para resaltar el título */
+.columna-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px; 
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Colores de énfasis personalizados para las líneas */
+.trayectoria-columna:text-contains("Formación") .columna-header::after,
+.trayectoria-columna:first-child .columna-header::after {
+    background-color: var(--accent); 
+}
+
+.trayectoria-columna:last-child .columna-header::after {
+    background-color: #c084fc; 
+}
+
+/* Iconos de los títulos más estilizados */
+.columna-icon {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.columna-icon.tech-edu {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+}
+
+.columna-icon.tech-exp {
+    background: rgba(168, 85, 247, 0.1);
+    color: #c084fc;
+}
+
+/* Título de la columna maximizado */
+.trayectoria-titulo-col {
+    font-size: 1.6rem; /* Tamaño incrementado para mayor jerarquía */
+    color: var(--text-main);
+    font-weight: 700; 
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Línea de Tiempo (Timeline) */
+.timeline {
+    position: relative;
+    border-left: 2px solid var(--border-color);
+    padding-left: 2rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; 
+}
+
+.timeline-item {
+    position: relative;
+    background-color: var(--card-bg);
+    padding: 1.8rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease;
+}
+
+/* Ajuste del marcador flotante en la línea guía */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: calc(-2rem - 7px);
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0f172a; 
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-header h4 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.timeline-date {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    background-color: rgba(56, 189, 248, 0.08);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.timeline-institution {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.timeline-desc strong {
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   INTERACCIONES HOVER OPTIMIZADAS
+   ========================================================================== */
+.timeline-item:hover {
+    transform: translateX(6px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.04);
+}
+
+.timeline-item:hover::before {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Ajuste Responsivo para Dispositivos Móviles */
+@media (max-width: 992px) {
+    .trayectoria-container {
+        gap: 4rem;
+    }
+    .columna-header {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+    .timeline-date {
+        align-self: flex-start;
+    }
+}
+
+/* ==========================================================================
+   SECCIÓN PROYECTOS DESTACADOS (SINCRO GITHUB CON BOTÓN EN CAJA CIAN)
+   ========================================================================== */
+.projects-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grilla flexible adaptable */
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantiene el título arriba y empuja el botón abajo */
+    min-height: 380px; 
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Estilo Destacado para el Sistema Kenpo --- */
+.project-card.featured-project {
+    border-top: 3px solid var(--accent); 
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.03);
+}
+
+/* Tipografías internas de la tarjeta */
+.project-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.project-content p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Metadatos (Lenguaje y Estrellas) */
+.repo-metadata {
+    margin-bottom: 1.5rem; 
+}
+
+/* ==========================================================================
+   BOTÓN "EXPLORAR REPOSITORIO" (ESTILO CAJA SÓLIDA CIAN)
+   ========================================================================== */
+.project-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    margin-top: auto;
+    
+    background-color: var(--accent); 
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out; /* Transición ligeramente más rápida para mayor responsividad */
+    cursor: pointer;
+}
+
+/* 1. Al pasar el mouse por encima (Hover) */
+.project-link:hover {
+    /* Crea un degradado vibrante entre tu cian y un azul eléctrico moderno */
+    background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%); 
+    color: #0f172a; /* Mantiene las letras oscuras para que se lean perfecto */
+    
+    /* Hace que el botón crezca un 2% de forma muy fluida */
+    transform: translateY(-3px) scale(1.02); 
+    
+    /* Crea un efecto de "neón prendido" o resplandor cian difuminado alrededor de la caja */
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4); 
+}
+
+/* 2. Al hacer clic o mantener presionado (Active) */
+.project-link:active {
+    background-color: #0284c7; 
+    color: #ffffff;
+    transform: translateY(0); /* Vuelve a su posición original simulando una pulsación */
+    box-shadow: 0 2px 4px rgba(2, 132, 199, 0.3); 
+    transition: all 0.05s ease; /* Transición inmediata para que el clic se sienta instantáneo */
+}
+
+/* --- Efectos Hover Generales de la Tarjeta --- */
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.08);
+}
+
+.project-card.featured-project:hover {
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Subtítulo de la sección */
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Indicador de carga */
+.github-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 3rem 0;
+}
+
+/* Spinner animado (Círculo de carga) */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent); 
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Estilos para los metadatos del Repositorio */
+.repo-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.repo-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Puntito del lenguaje */
+.lang-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent); 
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.repo-updated {
+    display: block;
+    width: 100%; 
+    margin-top: 0.25rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================================================
+   SECCIÓN CONTACTO - GRAN CAJA CON CONTENEDOR Y SOMBRAS
+   ========================================================================== */
+.contact-section {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NUEVA CAJA PRINCIPAL QUE RESALTA */
+.contact-wrapper {
+  background-color: #1e293b; 
+  border: 1px solid rgba(56, 189, 248, 0.15); 
+  border-radius: 20px; 
+  
+  max-width: 750px;
+  width: 100%;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  
+  /* Sombra avanzada: combina una base oscura con un halo cian muy difuminado */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 
+              0 1px 20px rgba(56, 189, 248, 0.04); 
+              
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto Hover para la Gran Caja */
+.contact-wrapper:hover {
+  transform: translateY(-4px); 
+  border-color: var(--accent); 
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8), 
+              0 1px 25px rgba(56, 189, 248, 0.12); /* Incrementa el resplandor de fondo */
+}
+
+/* CONTACT CARDS - SIN FRICCIÓN (Tu lógica original adaptada dentro de la caja) */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-card-link {
+  text-decoration: none;
+  flex: 1;
+  max-width: 300px;
+  min-width: 240px;
+}
+
+.contact-box {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-main);
+  transition: all 0.25s ease;
+}
+
+.contact-box i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.contact-box span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Efecto hover interno de tus botones */
+.contact-box:hover {
+  border-color: var(--accent);
+  background-color: rgba(56, 189, 248, 0.06); 
+  transform: translateY(-2px);
+}
+/* ==========================================================================
+   FOOTER - FONDO DEGRADADO QUE RESALTA Y COMBINA
+   ========================================================================== */
+footer {
+  text-align: center;
+  position: relative;
+  padding: 4rem 2rem; 
+  margin-top: 6rem;
+  
+  /* FONDO: Degradado elegante que va desde un Slate/Azul profundo a un tono más oscuro */
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  
+  /* BORDE SUPERIOR: Una línea sólida y brillante en tu cian de acento */
+  border-top: 2px solid var(--accent);
+  
+  /* TIPOGRAFÍA: Letras claras de alto contraste */
+  color: var(--text-main);
+  font-size: 0.92rem;
+  letter-spacing: 0.5px;
+  
+  /* Sombra superior para dar volumen y separar el footer del resto del cuerpo */
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Resalte para tu nombre o marca personal en el HTML */
+footer strong, 
+footer .highlight {
+  color: var(--accent);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3); /* Efecto de brillo neón */
+}
+
+/* ==========================================================================
+   BOTÓN VOLVER ARRIBA (SOBREPUESTO A LA DERECHA)
+   ========================================================================== */
+.scroll-btn {
+  position: absolute;
+  top: -22px;       
+  right: 2rem;      
+  
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  
+  background-color: var(--accent);
+  color: #0f172a;
+  border: 2px solid #1e293b;
+  
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+/* Estado Hover: Animación llamativa estilo neón (Mantenemos la elevación limpia) */
+.scroll-btn:hover {
+  background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%);
+  /* ELIMINADO EL TRANSLATE-X: Ahora solo flota verticalmente */
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Estado Active: Simula la pulsación */
+.scroll-btn:active {
+  background-color: #0284c7;
+  color: #ffffff;
+  transform: translateY(0); 
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  section {
+    padding: 6rem 1.5rem 3rem 1.5rem;
+  }
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE (HTML/CSS NATIVO)
+   ========================================================================== */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 450px;
+    position: relative;
+}
+
+/* Contenedor del Árbol */
+.engineering-tree {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+/* Nodos Base */
+.tree-node {
+    position: absolute;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Nodo Central (Raíz PYP) */
+.root-node {
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.pyp-badge {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+/* Nodos Periféricos (Hojas) */
+.leaf {
+    width: 110px;
+    height: 110px;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 16px; 
+}
+
+.leaf i {
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    transition: color 0.3s;
+}
+
+.leaf span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-muted);
+}
+
+/* Posiciones de los Nodos */
+.leaf.lt { top: 0; left: 0; }
+.leaf.rt { top: 0; right: 0; }
+.leaf.lb { bottom: 0; left: 0; }
+.leaf.rb { bottom: 0; right: 0; }
+
+/* Ramas / Líneas de Interconexión */
+.tree-branch {
+    position: absolute;
+    background: linear-gradient(var(--accent), transparent);
+    opacity: 0.2;
+    z-index: 1;
+    transform-origin: top left;
+}
+
+/* Dibujo geométrico de líneas que conectan al centro */
+.branch-left-top {
+    width: 2px; height: 110px;
+    top: 25%; left: 25%;
+    transform: rotate(45deg);
+}
+.branch-right-top {
+    width: 2px; height: 110px;
+    top: 25%; right: 25%;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.branch-left-bottom {
+    width: 2px; height: 110px;
+    bottom: 25%; left: 25%;
+    transform: rotate(-45deg);
+    background: linear-gradient(transparent, var(--accent));
+}
+.branch-right-bottom {
+    width: 2px; height: 110px;
+    bottom: 25%; right: 25%;
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+    background: linear-gradient(transparent, var(--accent));
+}
+
+/* Efectos Hover Interactivos */
+.leaf:hover {
+    transform: scale(1.08);
+    border-color: var(--accent);
+    background-color: #1e293b;
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
+}
+
+.leaf:hover i {
+    color: var(--accent);
+}
+
+.leaf:hover span {
+    color: var(--text-main);
+}
+
+/* ANIMACIÓN DE RESPIRACIÓN LUMÍNICA */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+        border-color: var(--accent);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        border-color: var(--accent-hover);
+    }
+}
+
+/* CONTROL DE RESPONSIVE (MÓVIL) */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-visual {
+        min-height: 380px;
+    }
+    .engineering-tree {
+        transform: scale(0.85); /* Escalado para pantallas pequeñas */
+    }
+    .cta-buttons {
+        justify-content: center;
+    }
+}

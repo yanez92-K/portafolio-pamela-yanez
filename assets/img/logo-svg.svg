@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="40" fill="#1e293b"/>
+  
+  <path d="M 35 45 L 20 45 L 20 60" stroke="#38bdf8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <text x="45" y="130" 
+        font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+        font-size="85" 
+        font-weight="900" 
+        fill="#ffffff" 
+        letter-spacing="-4">P<tspan fill="#38bdf8">Y</tspan></text>
+  
+  <circle cx="165" cy="120" r="12" fill="#38bdf8"/>
+</svg>
