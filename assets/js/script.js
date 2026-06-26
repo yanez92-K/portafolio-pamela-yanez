@@ -1,7 +1,7 @@
-// CONFIGURACIÓN: Tu usuario real de GitHub
+// CONFIGURACIÓN: el usuario real de GitHub
 const GITHUB_USERNAME = "yanez92-K";
 
-// 1. Mapeo exacto de tus proyectos con sus descripciones personalizadas
+// 1. Mapeo exacto de los proyectos con sus descripciones personalizadas
 const TEXTOS_PROYECTOS = {
   MiPrimerSpring:
     "Proyecto inicial de Spring Boot, demostrando la integración de controladores, servicios y repositorios con una base de datos H2 en memoria.",
@@ -55,16 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const allRepos = await response.json();
-      projectsContainer.innerHTML = ""; // Limpia el mensaje de "Cargando..." de inmediato
+      projectsContainer.innerHTML = ""; 
 
-      // Filtrado de tus repositorios según tu lista personalizada
+      // Filtrado de los repositorios según la lista personalizada
       const filteredRepos = allRepos.filter((repo) =>
         PROYECTOS_DESTACADOS.some(
           (name) => cleanString(name) === cleanString(repo.name),
         ),
       );
 
-      // Si por alguna razón la API no encuentra coincidencias, cargamos tus repositorios públicos como respaldo
+      // Si por alguna razón la API no encuentra coincidencias, cargamos los repositorios públicos como respaldo
       if (filteredRepos.length === 0) {
         console.warn("Mostrando repositorios de respaldo.");
         allRepos.slice(0, 4).forEach((repo) => filteredRepos.push(repo));
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const projectCard = document.createElement("div");
         projectCard.className = "project-card";
 
-        // Buscar la clave original de tu objeto para extraer la descripción personalizada exacta
+        // Buscar la clave original del objeto para extraer la descripción personalizada exacta
         const originalKey = PROYECTOS_DESTACADOS.find(
           (name) => cleanString(name) === cleanString(repo.name),
         );
@@ -147,20 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>
         `;
         projectsContainer.appendChild(projectCard);
-      }); // <-- Aquí cierra correctamente el bucle de las tarjetas
+      }); 
     } catch (error) {
       console.error("Error cargando los repositorios de GitHub:", error);
       projectsContainer.innerHTML =
         "<p class='subtitle' style='color: #f87171;'>No se pudieron sincronizar los proyectos en este momento. Por favor visita mi GitHub directamente.</p>";
     }
   }
-
-  // Ejecutamos la consulta a GitHub
   fetchSpecificRepos();
 
-  // ==========================================================================
-  // 4. Funcionalidad del botón Volver Arriba (Ubicación global y segura)
-  // ==========================================================================
+  // =========================================
+  // 4. Funcionalidad del botón Volver Arriba 
+  // =========================================
   const scrollTopBtn = document.getElementById("scroll-to-top");
 
   if (scrollTopBtn) {

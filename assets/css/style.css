@@ -1,4 +1,4 @@
-/* VARIABLES DE COLOR Y DISEÑO PREMIUM */
+
 :root {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
@@ -146,7 +146,7 @@ section {
   margin-bottom: 2.5rem;
 }
 
-/* BOTONES PREMIUM Y LLAMADAS A LA ACCIÓN */
+/* BOTONES  Y LLAMADAS A LA ACCIÓN */
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -211,9 +211,9 @@ section {
     padding-left: 0.8rem;
 }
 
-/* ==========================================================================
+/* ==========================================
    DISEÑO EXTENDIDO DE HABILIDADES TÉCNICAS
-   ========================================================================== */
+   ========================================== */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -231,7 +231,7 @@ section {
     justify-content: space-between;
     text-align: center;
     position: relative;
-    min-height: 295px; /* Altura unificada */
+    min-height: 295px; 
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -298,7 +298,7 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Resalta tus objetivos actuales de Java, Spring, Hibernate y MySQL */
+/* Resalta los objetivos actuales de Java, Spring, Hibernate y MySQL */
 .tech-status-pill.core {
     border-color: rgba(56, 189, 248, 0.4);
     color: var(--accent); /* Tu color cian */
@@ -312,13 +312,13 @@ section {
 
 /* Estado sutil para Node y React */
 .tech-status-pill.learning {
-    border-color: rgba(234, 179, 8, 0.3); /* Ámbar suave */
+    border-color: rgba(234, 179, 8, 0.3); 
     color: #f59e0b;
 }
 
-/* ==========================================================================
+/* =============================
    EFECTOS INTERACTIVOS (HOVER)
-   ========================================================================== */
+   ============================= */
 .tech-card:hover {
     transform: translateY(-6px);
     border-color: var(--accent);
@@ -401,9 +401,9 @@ section {
   margin-bottom: 0.75rem;
   font-style: italic;
 }
-/* ==========================================================================
-   SECCIÓN TRAYECTORIA (REDISEÑO DE ALTO IMPACTO)
-   ========================================================================== */
+/* ======================
+   SECCIÓN TRAYECTORIA 
+   ======================*/
 .trayectoria-section {
     padding: 6rem 2rem; 
     background-color: transparent;
@@ -475,7 +475,7 @@ section {
 
 /* Título de la columna maximizado */
 .trayectoria-titulo-col {
-    font-size: 1.6rem; /* Tamaño incrementado para mayor jerarquía */
+    font-size: 1.6rem; 
     color: var(--text-main);
     font-weight: 700; 
     letter-spacing: 0.5px;
@@ -557,9 +557,9 @@ section {
     color: var(--text-main);
 }
 
-/* ==========================================================================
+/* ================================
    INTERACCIONES HOVER OPTIMIZADAS
-   ========================================================================== */
+   ================================ */
 .timeline-item:hover {
     transform: translateX(6px);
     border-color: var(--accent);
@@ -616,7 +616,7 @@ section {
     padding: 2rem 1.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Mantiene el título arriba y empuja el botón abajo */
+    justify-content: space-between; 
     min-height: 380px; 
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -648,9 +648,9 @@ section {
     margin-bottom: 1.5rem; 
 }
 
-/* ==========================================================================
+/* =======================================================
    BOTÓN "EXPLORAR REPOSITORIO" (ESTILO CAJA SÓLIDA CIAN)
-   ========================================================================== */
+   =======================================================*/
 .project-link {
     display: flex;
     align-items: center;
@@ -675,9 +675,9 @@ section {
 
 /* 1. Al pasar el mouse por encima (Hover) */
 .project-link:hover {
-    /* Crea un degradado vibrante entre tu cian y un azul eléctrico moderno */
+    /* Crea un degradado vibrante entre el cian y un azul eléctrico moderno */
     background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%); 
-    color: #0f172a; /* Mantiene las letras oscuras para que se lean perfecto */
+    color: #0f172a; /* Mantiene las letras oscuras para que se lean */
     
     /* Hace que el botón crezca un 2% de forma muy fluida */
     transform: translateY(-3px) scale(1.02); 
@@ -772,9 +772,9 @@ section {
     color: rgba(255, 255, 255, 0.4);
 }
 
-/* ==========================================================================
+/* =======================================================
    SECCIÓN CONTACTO - GRAN CAJA CON CONTENEDOR Y SOMBRAS
-   ========================================================================== */
+   ======================================================= */
 .contact-section {
   padding: 6rem 2rem;
   display: flex;
@@ -808,7 +808,7 @@ section {
               0 1px 25px rgba(56, 189, 248, 0.12); /* Incrementa el resplandor de fondo */
 }
 
-/* CONTACT CARDS - SIN FRICCIÓN (Tu lógica original adaptada dentro de la caja) */
+/* Tarjetas de contacto */
 .contact-cards {
   display: flex;
   justify-content: center;
@@ -845,15 +845,15 @@ section {
   font-weight: 500;
 }
 
-/* Efecto hover interno de tus botones */
+/* Efecto hover interno de los botones */
 .contact-box:hover {
   border-color: var(--accent);
   background-color: rgba(56, 189, 248, 0.06); 
   transform: translateY(-2px);
 }
-/* ==========================================================================
+/* ================================================
    FOOTER - FONDO DEGRADADO QUE RESALTA Y COMBINA
-   ========================================================================== */
+   ================================================ */
 footer {
   text-align: center;
   position: relative;
@@ -863,7 +863,7 @@ footer {
   /* FONDO: Degradado elegante que va desde un Slate/Azul profundo a un tono más oscuro */
   background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
   
-  /* BORDE SUPERIOR: Una línea sólida y brillante en tu cian de acento */
+  /* BORDE SUPERIOR: Una línea sólida y brillante en el cian de acento */
   border-top: 2px solid var(--accent);
   
   /* TIPOGRAFÍA: Letras claras de alto contraste */
@@ -875,7 +875,7 @@ footer {
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Resalte para tu nombre o marca personal en el HTML */
+/* Resalte para la marca personal en el HTML */
 footer strong, 
 footer .highlight {
   color: var(--accent);
@@ -883,9 +883,9 @@ footer .highlight {
   text-shadow: 0 0 10px rgba(56, 189, 248, 0.3); /* Efecto de brillo neón */
 }
 
-/* ==========================================================================
+/* ================================================
    BOTÓN VOLVER ARRIBA (SOBREPUESTO A LA DERECHA)
-   ========================================================================== */
+   ================================================ */
 .scroll-btn {
   position: absolute;
   top: -22px;       
@@ -910,10 +910,9 @@ footer .highlight {
   z-index: 10;
 }
 
-/* Estado Hover: Animación llamativa estilo neón (Mantenemos la elevación limpia) */
+/* Estado Hover: Animación llamativa estilo neón */
 .scroll-btn:hover {
   background: linear-gradient(135deg, #7dd3fc 0%, #0ea5e9 100%);
-  /* ELIMINADO EL TRANSLATE-X: Ahora solo flota verticalmente */
   transform: translateY(-4px); 
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
 }
@@ -925,7 +924,7 @@ footer .highlight {
   transform: translateY(0); 
 }
 
-/* RESPONSIVE DESIGN */
+/* Diseño Responsivo */
 @media (max-width: 768px) {
   section {
     padding: 6rem 1.5rem 3rem 1.5rem;
@@ -941,9 +940,9 @@ footer .highlight {
   }
 }
 
-/* ==========================================================================
-   DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE (CORREGIDO Y SIN DESCUADRES)
-   ========================================================================== */
+/* ============================================
+   DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE 
+   ============================================ */
 
 .hero-container {
     display: flex;
@@ -962,7 +961,7 @@ footer .highlight {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 480px; /* Un poco más de margen por el nodo de abajo */
+    min-height: 480px; 
     position: relative;
 }
 
@@ -988,7 +987,7 @@ footer .highlight {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Nodo Central (Raíz PYP) - Centrado absoluto matemático */
+/* Nodo Central (Raíz PYP)  */
 .root-node {
     width: 90px;
     height: 90px;
@@ -999,7 +998,7 @@ footer .highlight {
     border-color: var(--accent);
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
     animation: pulseGlow 3s ease-in-out infinite;
-    z-index: 10; /* Por encima de las líneas siempre */
+    z-index: 10; 
 }
 
 .pyp-badge {
@@ -1038,30 +1037,27 @@ footer .highlight {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   POSICIONES DE LOS NODOS (CORREGIDO)
-   ========================================================================== */
+/* ========================
+   POSICIONES DE LOS NODOS 
+   ========================*/
 .leaf.lt { top: 0; left: 0; }
 .leaf.rt { top: 0; right: 0; }
 .leaf.lb { bottom: 0; left: 0; }
 .leaf.rb { bottom: 0; right: 0; }
-/* Mantenemos .top para que haga match perfecto con tu HTML actual sin cambiarlo */
 .leaf.top { bottom: -45px; left: 50%; transform: translateX(-50%); } 
 
-/* ==========================================================================
-   RAMAS / LÍNEAS DE INTERCONEXIÓN SINCRONIZADAS AL CENTRO (50%, 50%)
-   ========================================================================== */
+/* ============================================================
+   RAMAS / LÍNEAS DE INTERCONEXIÓN SINCRONIZADAS AL CENTRO 
+   ============================================================ */
 .tree-branch {
     position: absolute;
     background: var(--accent);
     opacity: 0.25;
-    z-index: 1;
-    /* Todas nacen del punto exacto del centro matemático del árbol */
     top: 50%;
     left: 50%;
 }
 
-/* Ajuste milimétrico de las diagonales hacia el centro de las tarjetas */
+/* Ajuste de las diagonales hacia el centro de las tarjetas */
 .branch-left-top {
     width: 2px; 
     height: 125px;
@@ -1094,19 +1090,18 @@ footer .highlight {
     background: linear-gradient(to bottom, var(--accent), transparent);
 }
 
-/* Línea vertical limpia para Empatía */
 .branch-top {
     width: 2px;
     height: 110px;
-    top: 50%; /* Asegura el anclaje en el centro */
+    top: 50%; 
     left: 50%;
     transform: translate(-50%, 0);
     transform-origin: top center;
     background: linear-gradient(to bottom, var(--accent), transparent);
 }
-/* ==========================================================================
-   EFECTOS HOVER INTERACTIVOS (ESTABLES SIN TEMBLORES)
-   ========================================================================== */
+/* ===========================
+   EFECTOS HOVER INTERACTIVOS 
+   =========================== */
 .leaf:hover {
     transform: scale(1.08);
     border-color: var(--accent);
@@ -1114,7 +1109,6 @@ footer .highlight {
     box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
 }
 
-/* Forzamos que la hoja .top mantenga su centrado en X durante el hover */
 .leaf.top:hover {
     transform: translateX(-50%) scale(1.08) !important;
 }
@@ -1150,7 +1144,7 @@ footer .highlight {
         min-height: 420px;
     }
     .engineering-tree {
-        transform: scale(0.85); /* Escalado fluido manteniendo proporciones intactas */
+        transform: scale(0.85);
     }
     .cta-buttons {
         justify-content: center;
