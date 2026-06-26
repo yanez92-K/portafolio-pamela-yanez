@@ -572,26 +572,6 @@ section {
     box-shadow: 0 0 10px var(--accent);
 }
 
-/* Ajuste Responsivo para Dispositivos Móviles */
-@media (max-width: 992px) {
-    .trayectoria-container {
-        gap: 4rem;
-    }
-    .columna-header {
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.6rem;
-    }
-    .timeline-date {
-        align-self: flex-start;
-    }
-}
 
 /* ==========================================================================
    SECCIÓN PROYECTOS DESTACADOS (SINCRO GITHUB CON BOTÓN EN CAJA CIAN)
@@ -924,28 +904,6 @@ footer .highlight {
   transform: translateY(0); 
 }
 
-/* Diseño Responsivo */
-@media (max-width: 768px) {
-  section {
-    padding: 6rem 1.5rem 3rem 1.5rem;
-  }
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-  .nav-links {
-    display: none;
-  }
-}
-#section-title h2, .section-title h2 { 
-    font-size: 2rem;          
-    text-align: center;       
-    width: 100%;              
-    box-sizing: border-box;
-  }
-
 /* ============================================
    DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE 
    ============================================ */
@@ -1139,20 +1097,87 @@ footer .highlight {
     }
 }
 
-/* CONTROL DE RESPONSIVE (MÓVIL) */
-@media (max-width: 900px) {
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-    }
-    .hero-visual {
-        min-height: 420px;
-    }
-    .engineering-tree {
-        transform: scale(0.85);
-    }
-    .cta-buttons {
-        justify-content: center;
-    }
+/* ========================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS) 
+   ========================================*/
+
+/* Optimización para pantallas medianas (Tablets) */
+@media (max-width: 992px) {
+  .trayectoria-container {
+    gap: 4rem;
+  }
+  .columna-header {
+    margin-bottom: 2rem;
+  }
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-visual {
+    min-height: 420px;
+  }
+  .engineering-tree {
+    transform: scale(0.85);
+  }
+  .cta-buttons {
+    justify-content: center;
+  }
+}
+
+/* Optimización para pantallas pequeñas */
+@media (max-width: 768px) {
+  section {
+    padding: 6rem 1.5rem 3rem 1.5rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+  
+  .nav-links {
+    display: none; 
+  }
+
+  .section-title { 
+    font-size: 1.8rem; 
+    text-align: center;       
+    width: 100%;              
+    margin-bottom: 2rem;
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+  .timeline {
+    gap: 2rem;
+  }
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .timeline-date {
+    align-self: flex-start;
+  }
+  .contact-wrapper {
+    padding: 2.5rem 1rem;     
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contact-cards {
+    flex-direction: column;   
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  .contact-card-link {
+    width: 100%;              
+    max-width: 100%;          
+    min-width: 0;             
+  }
+  .contact-box {
+    justify-content: center;  
+  }
 }
