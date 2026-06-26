@@ -939,6 +939,12 @@ footer .highlight {
     display: none;
   }
 }
+#section-title h2, .section-title h2 { 
+    font-size: 2rem;          
+    text-align: center;       
+    width: 100%;              
+    box-sizing: border-box;
+  }
 
 /* ============================================
    DISEÑO DEL ÁRBOL DE INGENIERÍA DE SOFTWARE 
